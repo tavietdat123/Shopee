@@ -1,0 +1,79 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #fb5533;
+    --header-all: 120px;
+    --header-navbar: 34px;
+    --header-search: calc(var(--header-all) - var(--header-navbar));
+    --header-sortbar: 46px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn {
+    width: 142px;
+    height: 36px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.pagination-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-item {
+    margin: 0 16px;
+}
+
+.pagination-link {
+    text-decoration: none;
+    color: #939393;
+    font-size: 2rem;
+    font-weight: 300;
+    min-width: 40px;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+}
+
+.pagination-item--active .pagination-link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 2px;
+}
+
+.pagination-item--active:hover .pagination-link {
+    background-color: #ed7158;
+}
